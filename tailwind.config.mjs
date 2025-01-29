@@ -7,11 +7,11 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
+      fontSize: {
+        'body-lg': '1rem',
+        'body': '.875rem',
+      }
+    }
   },
   plugins: [],
 };
