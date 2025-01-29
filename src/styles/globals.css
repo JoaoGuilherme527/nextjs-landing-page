@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    body {
-      @apply text-body;
-    }
-    
-    @screen lg { /* applying font size for lg breakpoint */
-      body {
-        @apply text-body-lg;
-      }
-    }
-  }
-
 :root {
     @apply [--background:#ffffff] [--foreground:#171717] [--orange:#fe4119] [--black:#1b1b1b] [--gray:#e5e7eb];
 }
@@ -22,56 +10,442 @@
     @apply transition-all duration-300;
 }
 
-.secao-3 {
-    height: fit-content;
-    padding-block: 60px;
-    padding-top: 30px;
-    padding-inline: 20px;
+.secao-5 ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background-color: #f7f7f7;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #00000015;
+    gap: 10px;
+    li {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 20px;
+        padding-block: 20px;
+        border-bottom: 1px solid #00000015;
+        gap: 20px;
+        overflow: hidden;
+
+        img {
+            height: 20px;
+            opacity: 0.5;
+            transform: rotate(45deg);
+        }
+        h1 {
+            font-size: 18px;
+            color: #222;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        p {
+            color: #666666;
+            font-size: 16px;
+            letter-spacing: 0px;
+            line-height: 1.5;
+            text-align: left;
+            padding-left: 30px;
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+    .closed {
+        height: 65px;
+    }
+    .open {
+        height: fit-content;
+        img {
+            transform: rotate(0deg);
+        }
+        p {
+            opacity: 1;
+        }
+    }
 }
 
-.secao-3 h1 {
-    font-weight: 700;
-    color: var(--orange);
-    font-size: 26px;
-    letter-spacing: -1px;
-    line-height: 1.2;
-    text-align: center;
-}
+.section-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+    padding-block: 80px;
+    background-color: var(--orange);
+    gap: 25px;
 
-.section-4 {
-    height: 50dvh;
+    .section-header {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 30px;
+        gap: 20px;
+
+        .flex-image-wrapper {
+            display: flex;
+
+            .image-header-wrapper {
+                display: none;
+            }
+
+            .header-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                h1 {
+                    font-weight: 700;
+                    color: #ffffff;
+                    font-size: 25px;
+                    letter-spacing: 0px;
+                    line-height: 1.2;
+                    text-align: left;
+                }
+
+                p {
+                    color: #ffffff;
+                    font-size: 15px;
+                    letter-spacing: 0px;
+                    line-height: 1.2;
+                }
+                .button-wrapper {
+                    padding-top: 10px;
+                    padding-bottom: 40px;
+                }
+            }
+        }
+
+        .reference-text {
+            color: #ffffff;
+            font-size: 15px;
+            letter-spacing: 0px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .references-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-block: 20px;
+            gap: 30px;
+
+            .reference-box {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.1);
+                gap: 10px;
+                border-radius: 15px;
+
+                .reference-box-description {
+                    display: flex;
+                    gap: 5px;
+                    h2 {
+                        font-weight: 700;
+                        color: #ffffff;
+                        font-size: 18px;
+                        letter-spacing: -0.04em;
+                        line-height: 1.4;
+                    }
+                }
+                p {
+                    color: #ffffff;
+                    font-size: 14px;
+                    letter-spacing: -0.02em;
+                    line-height: 1.6;
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
 
 .section-7 {
-    height: 100dvh;
-    flex-direction: row-reverse;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+
+    .logo-simbolo {
+        display: none;
+    }
+
+    .who-training-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        gap: 25px;
+
+        h1 {
+            font-weight: 700;
+            color: var(--orange);
+            font-size: 19px;
+            letter-spacing: -0.04em;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+
+            li {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                p {
+                    font-size: 16px;
+                    letter-spacing: 0em;
+                    line-height: 1.2;
+                    text-align: left;
+                }
+
+                img {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
-@media (min-width: 1200px) {
-    *{
-        @apply text-body-lg;
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background-color: var(--orange);
+
+    .footer-copyright {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 50px;
+        }
+
+        p {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 10px;
+            letter-spacing: 0em;
+            line-height: 1.2;
+        }
+    }
+
+    .about-titles {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 10px;
+
+        a {
+            color: #ffffff;
+            font-size: 12px;
+            letter-spacing: 0em;
+            line-height: 1.2;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        padding-block: 20px;
+        img {
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-title{
+        font-size: 50px;
     }
     
-    .sirImg {
-        width: 745px;
+    .training-explanation {
+        font-size: 25px;
+        width: 40%;
     }
 
     .secao-2 {
-        @apply flex-row-reverse justify-center items-center gap-2.5 h-[500px];
+        flex-direction: row-reverse;
+        gap: 20px;
+        height: 600px;
     }
-    .ladyTyping {
-        height: 100%;
+    .product {
+        padding-inline: 60px;
+        padding-block: 100px;
+    }
+
+    .product-title {
+        font-size: 50px;
+    }
+
+    .product-description {
+        font-size: 24px;
+    }
+
+    .secao-3 {
+        padding-inline: 50px;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .development-stages {
+        font-size: 40px;
     }
 
     .module-wrapper {
         flex-direction: row;
-        &:nth-child(3),&:nth-child(5){
+        &:nth-child(3),
+        &:nth-child(5) {
             flex-direction: row-reverse;
         }
+        align-items: center;
+        justify-content: center;
         width: 80%;
+    }
+
+    .module-box {
+        height: 356px;
+        width: 475px;
+    }
+
+    .title-box {
+        font-size: 44px;
+    }
+
+    .box-description {
+        width: 60%;
+        font-size: 22px;
+    }
+
+    .module-title {
+        font-size: 50px;
+    }
+
+    .module-description {
+        font-size: 24px;
+    }
+
+    .last-module {
+        align-items: center;
+    }
+
+    .secao-4 {
+        gap: 40px;
+    }
+
+    .senhor-digitando {
+        width: 800px;
+    }
+
+    .mulher-digitando {
+        height: 100%;
+    }
+
+    .responsive-text {
+        font-size: 50px;
+        width: 70%;
+    }
+
+    .secao-5 {
+        flex-direction: row;
+        min-height: 500px;
+        .text-wrapper {
+            width: 50%;
+            align-items: start;
+            padding-inline: 20px;
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        ul {
+            width: 50%;
+        }
+    }
+
+    .section-6 .section-header {
+        gap: 40px;
+
+        .reference-text {
+            font-size: 20px;
+        }
+
+        .references-wrapper {
+            flex-direction: row;
+        }
+
+        .flex-image-wrapper {
+            flex-direction: row;
+            gap: 50px;
+
+            .image-header-wrapper {
+                display: block;
+            }
+
+            .header-wrapper {
+                align-items: start;
+
+                h1 {
+                    font-size: 55px;
+                }
+
+                p {
+                    font-size: 27px;
+                }
+            }
+        }
+    }
+
+    .section-7 {
+        flex-direction: row;
+        padding-block: 50px;
+        padding-inline: 30px;
+        .who-training-description {
+            align-items: baseline;
+            width: 40%;
+
+            h1 {
+                font-size: 35px;
+            }
+            ul li {
+                img {
+                    height: 30px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+        .logo-simbolo {
+            display: block;
+            height: 330px;
+        }
     }
 }
