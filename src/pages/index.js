@@ -282,7 +282,7 @@ export default function Home() {
                         <a target="_blank" href="https://beimpulse.com/a-impulse/termos-de-uso">
                             Termos de uso
                         </a>
-                        <a target="_blank" href="https://beimpulse.com/a-impulse/termos-de-uso">
+                        <a target="_blank" href="https://beimpulse.com/a-impulse/politica-de-privacidade">
                             Política de privacidade
                         </a>
                     </div>
