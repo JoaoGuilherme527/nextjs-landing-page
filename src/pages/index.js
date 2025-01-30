@@ -47,16 +47,16 @@ export default function Home() {
                     content="A Impulse irá te mostrar como conquistar sua renda pela internet de forma fácil! Através dos nossos treinamentos diretos e uma aba de trabalhos."
                 ></meta>
                 <meta name="keywords" content="treinamento,desenvolvimento,carreira,educação,tecnologia"></meta>
-                <link rel="icon" href="/favicon.ico" ></link>
+                <link rel="icon" href="/favicon.ico"></link>
             </Head>
             <main className={inter.className} style={{overflow: "clip"}}>
                 <Navbar />
-                <section className="box-border h-min flex flex-col justify-center items-center overflow-hidden content-center flex-nowrap gap-10 px-[30px] py-[50px]">
+                <section className="box-border h-min flex flex-col justify-center items-center overflow-hidden content-center flex-nowrap gap-10 px-[30px] py-[50px] h-[100dvh]">
                     <h1 className="w-auto h-auto whitespace-pre-wrap [word-wrap:break-word] [word-break:break-word] font-bold not-italic text-[color:var(--orange)] text-4xl leading-none text-center main-title">
                         Profissional de digitação
                     </h1>
                     <img
-                        className="senhor-digitando overflow-hidden bg-cover bg-no-repeat bg-center shadow-[0_0_15px_5px_#0003] rounded-[20px]"
+                        className=" overflow-hidden bg-cover bg-no-repeat bg-center shadow-[0_0_15px_5px_#0003] rounded-[20px] senhor-digitando"
                         src="/senhor-digitando.png"
                     />
                     <p className="font-[500] text-[#888888] text-lg text-center training-explanation">
