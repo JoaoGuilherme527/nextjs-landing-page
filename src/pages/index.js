@@ -47,9 +47,9 @@ export default function Home() {
                     content="A Impulse irá te mostrar como conquistar sua renda pela internet de forma fácil! Através dos nossos treinamentos diretos e uma aba de trabalhos."
                 ></meta>
                 <meta name="keywords" content="treinamento,desenvolvimento,carreira,educação,tecnologia"></meta>
-                <link rel="icon" href="/favicon.ico"></link>
+                <link rel="icon" href="/favicon.ico" ></link>
             </Head>
-            <main className={inter.className}>
+            <main className={inter.className} style={{overflow: "clip"}}>
                 <Navbar />
                 <section className="box-border h-min flex flex-col justify-center items-center overflow-hidden content-center flex-nowrap gap-10 px-[30px] py-[50px]">
                     <h1 className="w-auto h-auto whitespace-pre-wrap [word-wrap:break-word] [word-break:break-word] font-bold not-italic text-[color:var(--orange)] text-4xl leading-none text-center main-title">
