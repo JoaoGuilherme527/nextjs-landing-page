@@ -158,7 +158,7 @@ export default function Home() {
                     <h1 className="responsive-text font-bold text-[white] text-2xl tracking-[-1px] leading-[1.2] text-center">
                         Comece sua jornada de Profissional de digitação agora mesmo
                     </h1>
-                    <Button title={"Clique aqui para começar agora"} url={url} />
+                    <Button className={"button-start-now"} title={"Clique aqui para começar agora"} url={url} />
                 </section>
                 <section className="h-min flex flex-col justify-center items-center bg-[#f7f7f7] gap-5 text-[color:var(--black,#1b1b1b)] p-[60px] secao-5">
                     <div className="flex flex-col justify-center items-center gap-[15px] p-0 text-wrapper">
